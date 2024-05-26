@@ -1,4 +1,247 @@
-html {
+/* Estilos para modo oscuro */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .card,
+body.dark-mode .carousel-item {
+    background-color: #555 !important;
+    color: #fff;
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-text {
+    color: #fff;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+body.dark-mode #cart,
+body.dark-mode .list-group-item {
+    background-color: #444;
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark-mode .list-group-item:hover {
+    background-color: #666;
+    border-color: #666;
+}
+
+body.dark-mode .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+body.dark-mode .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Ajuste para el fondo oscuro del carrusel */
+body.dark-mode #economicIndicatorsCarousel {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+body.dark-mode .indicator-card {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.indicator-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
-  width: 100%;
+  text-align: center;
+}
+
+.indicator-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.indicator-card .card-body .card-title {
+  margin-bottom: 10px;
+}
+
+/* Estilos para modo claro */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light-mode .card,
+body.light-mode .carousel-item {
+    background-color: #f8f9fa !important;
+    color: #000;
+}
+
+body.light-mode .card-title,
+body.light-mode .card-text {
+    color: #000;
+}
+
+body.light-mode .btn-primary,
+body.light-mode .btn-secondary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff; /* Color de texto para botones en modo claro */
+}
+
+body.light-mode .btn-primary:hover,
+body.light-mode .btn-secondary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+body.light-mode #cart,
+body.light-mode .list-group-item {
+    background-color: #f8f9fa;
+    color: #000;
+    border-color: #f8f9fa;
+}
+
+body.light-mode .list-group-item:hover {
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+body.light-mode .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff; /* Color de texto para botones en modo claro */
+}
+
+body.light-mode .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Ajuste para el fondo claro del carrusel */
+body.light-mode #economicIndicatorsCarousel {
+    background-color: #f8f9fa;
+    color: #000;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+body.light-mode .indicator-card {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+body.light-mode .indicator-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+body.light-mode .indicator-card .card-body .card-title {
+    margin-bottom: 10px;
+}
+
+/* Estilos generales */
+.card,
+.carousel-item {
+    background-color: #343a40 !important;
+    color: #fff;
+}
+
+.card-title,
+.card-text {
+    color: #fff;
+}
+
+.btn-primary,
+.btn-secondary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+#cart,
+.list-group-item {
+    background-color: #343a40;
+    color: #fff;
+    border-color: #343a40;
+}
+
+.list-group-item:hover {
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+#economicIndicatorsCarousel {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.indicator-card {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.indicator-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.indicator-card .card-body .card-title {
+    margin-bottom: 10px;
 }

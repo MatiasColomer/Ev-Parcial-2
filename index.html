@@ -1,16 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+    <div class="container mt-5">
+        <h2>Carrito de Compras</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/completo.jpg" class="card-img-top" alt="Completo">
+                    <div class="card-body">
+                        <h5 class="card-title">Completo</h5>
+                        <p class="card-text">Precio: $2000</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Completo"
+                            data-price="2000">Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/fajitas.jpg" class="card-img-top" alt="Fajita">
+                    <div class="card-body">
+                        <h5 class="card-title">Fajita</h5>
+                        <p class="card-text">Precio: $1500</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Fajita"
+                            data-price="1500">Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/hamburguesa.jpg" class="card-img-top" alt="Hamburguesa">
+                    <div class="card-body">
+                        <h5 class="card-title">Hamburguesa</h5>
+                        <p class="card-text">Precio: $4000</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Hamburguesa"
+                            data-price="4000">Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/sandwich.jpg" class="card-img-top" alt="Sandwich">
+                    <div class="card-body">
+                        <h5 class="card-title">Sandwich</h5>
+                        <p class="card-text">Precio: $4500</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Sandwich"
+                            data-price="4500">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-5">Carrito</h3>
+        <ul id="cart" class="list-group"></ul>
+        <div class="mt-3">
+            <h4>Total: $<span id="totalPrice">0.00</span></h4>
+        </div>
+
+        <h3 class="mt-5">Indicadores Económicos</h3>
+        <div id="economicIndicatorsCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" id="economicIndicators">
+            </div>
+            <a class="carousel-control-prev" href="#economicIndicatorsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#economicIndicatorsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+
+        <button id="toggleDarkMode" class="btn btn-dark mt-3">Cambiar Fondo</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
