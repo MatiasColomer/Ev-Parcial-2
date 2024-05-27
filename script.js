@@ -1,11 +1,11 @@
 $(document).ready(function() {
     const cart = {};
 
-    // Evento click para agregar productos al carrito
+    
     $('.add-to-cart').on('click', function() {
         const productName = $(this).data('product');
         const productPrice = parseFloat($(this).data('price'));
-        const productQuantity = 1; // Default quantity for each button click
+        const productQuantity = 1; 
 
         if (cart[productName]) {
             cart[productName].quantity += productQuantity;
@@ -21,7 +21,6 @@ $(document).ready(function() {
         updateCart();
     });
 
-    // Función para actualizar el carrito
     function updateCart() {
         const $cart = $('#cart');
         $cart.empty();
@@ -43,14 +42,28 @@ $(document).ready(function() {
                     updateCart();
                 });
 
-            $item.append($removeButton);
+            const $decrementButton = $('<button></button>')
+                .addClass('btn btn-secondary btn-sm')
+                .text('-')
+                .on('click', function() {
+                    if (item.quantity > 1) {
+                        item.quantity--;
+                        item.totalPrice = item.quantity * item.price;
+                        updateCart();
+                    }
+                });
+
+            const $actionButtons = $('<div></div>')
+                .addClass('action-buttons')
+                .append($decrementButton, $removeButton);
+
+            $item.append($actionButtons);
             $cart.append($item);
         });
 
         $('#totalPrice').text(totalCartPrice.toFixed(2));
     }
 
-    // Función para obtener y mostrar los indicadores económicos
     function fetchEconomicIndicators() {
         $.ajax({
             url: 'https://mindicador.cl/api',
@@ -79,7 +92,6 @@ $(document).ready(function() {
                     }
                 });
 
-                // Establecer el primer indicador como activo
                 $indicatorsDiv.children().first().addClass('active');
             },
             error: function() {
@@ -90,13 +102,11 @@ $(document).ready(function() {
 
     fetchEconomicIndicators();
 
-    // Iniciar el carrusel de indicadores económicos
     $('#economicIndicatorsCarousel').carousel({
-        interval: 3000, // Cambia cada 3 segundos
+        interval: 3000, 
         pause: 'hover'
     });
 
-    // Evento click para cambiar el modo
     $('#toggleDarkMode').on('click', function() {
         $('body').toggleClass('dark-mode');
     });

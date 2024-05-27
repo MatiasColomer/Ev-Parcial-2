@@ -1,3 +1,39 @@
+/* Estilo general del carrito */
+#cart {
+    margin-top: 20px;
+}
+
+/* Estilo para los elementos de la lista del carrito */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Contenedor para los botones de acción (eliminar y decrementar) */
+.action-buttons {
+    display: flex;
+    gap: 5px; /* Espacio entre los botones */
+}
+
+/* Botón de eliminar */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+/* Botón de decrementar */
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
 /* Estilos para modo oscuro */
 body.dark-mode {
     background-color: #333;
