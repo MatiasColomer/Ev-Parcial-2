@@ -1,9 +1,7 @@
-/* Estilo general del carrito */
 #cart {
     margin-top: 20px;
 }
 
-/* Estilo para los elementos de la lista del carrito */
 .list-group-item {
     display: flex;
     justify-content: space-between;
@@ -14,27 +12,23 @@
     margin-bottom: 5px;
 }
 
-/* Contenedor para los botones de acción (eliminar y decrementar) */
 .action-buttons {
     display: flex;
-    gap: 5px; /* Espacio entre los botones */
+    gap: 5px; 
 }
 
-/* Botón de eliminar */
 .btn-danger {
     background-color: #dc3545;
     border-color: #dc3545;
     color: white;
 }
 
-/* Botón de decrementar */
 .btn-secondary {
     background-color: #6c757d;
     border-color: #6c757d;
     color: white;
 }
 
-/* Estilos para modo oscuro */
 body.dark-mode {
     background-color: #333;
     color: #fff;
@@ -83,7 +77,6 @@ body.dark-mode .btn-danger:hover {
     border-color: #bd2130;
 }
 
-/* Ajuste para el fondo oscuro del carrusel */
 body.dark-mode #economicIndicatorsCarousel {
     background-color: #333;
     color: #fff;
@@ -118,7 +111,6 @@ body.dark-mode .indicator-card {
   margin-bottom: 10px;
 }
 
-/* Estilos para modo claro */
 body.light-mode {
     background-color: #fff;
     color: #000;
@@ -139,7 +131,7 @@ body.light-mode .btn-primary,
 body.light-mode .btn-secondary {
     background-color: #007bff;
     border-color: #007bff;
-    color: #fff; /* Color de texto para botones en modo claro */
+    color: #fff; 
 }
 
 body.light-mode .btn-primary:hover,
@@ -163,7 +155,7 @@ body.light-mode .list-group-item:hover {
 body.light-mode .btn-danger {
     background-color: #dc3545;
     border-color: #dc3545;
-    color: #fff; /* Color de texto para botones en modo claro */
+    color: #fff; 
 }
 
 body.light-mode .btn-danger:hover {
@@ -171,7 +163,6 @@ body.light-mode .btn-danger:hover {
     border-color: #bd2130;
 }
 
-/* Ajuste para el fondo claro del carrusel */
 body.light-mode #economicIndicatorsCarousel {
     background-color: #f8f9fa;
     color: #000;
@@ -203,7 +194,6 @@ body.light-mode .indicator-card .card-body .card-title {
     margin-bottom: 10px;
 }
 
-/* Estilos generales */
 .card,
 .carousel-item {
     background-color: #343a40 !important;
